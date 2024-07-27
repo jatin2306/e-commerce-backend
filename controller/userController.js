@@ -6,7 +6,7 @@ import jwt from 'jsonwebtoken';
 
 export const fetch = async (req, res) => {
     try {
-        const users = await User.find();
+        const users = await User.find().select('-__v');
         if (!users.length) {
             return res.status(404).json({ message: "User Not Found" })
         }
