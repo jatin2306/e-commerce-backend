@@ -19,4 +19,4 @@ mongoose.connect(MONGOURL).then(()=>{
     console.log(error)
 });
 
-app.use('/app/user',route);
+app.use('/',route);
